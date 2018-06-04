@@ -43,7 +43,7 @@ ADD container-files /
 
 
 # Add vsftpd.conf file to /etc/vsftpd  
-ADD vsftpd.conf /etc/vsftpd/
+ADD /container-files/etc/vsftpd.conf /etc/vsftpd/
 
 RUN \
    sed -ri "s/www/${USER}/g" /etc/supervisord.conf && \
